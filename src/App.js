@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { FullName } from "./components/FullName";
+import { SalSlip } from "./components/SalSlip";
+import "./components/common.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div className="main">
+    <input type="number" placeholder="Enter your Basic Salary" />
+    <button>Submit</button>
+    <FullName fname="Om" lname="Prakash" />
+    <SalSlip basic={10000} />
+   </div>
   );
 }
 
